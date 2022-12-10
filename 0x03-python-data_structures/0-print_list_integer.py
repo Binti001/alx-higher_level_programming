@@ -2,6 +2,6 @@
 
 def print_list_integer(my_list=[]):
 
-  for integer in my_list:
+  for i in range(len(my_list)):
 
-    print("{}".format(integer))
+    print("{}".format(my_list[i]))
