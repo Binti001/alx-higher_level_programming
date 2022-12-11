@@ -1,23 +1,29 @@
 #!/usr/bin/python3
 
 def max_integer(my_list=[]):
-    if (len(my_list) == 0):
+
+    #Check if the list is empty
+
+    if len(my_list) == 0:
+
         return None
 
-    else:
+    #Initialize the maximum integer
 
-        i = (len(my_list) - 1)
+    max_int = my_list[0]
 
-        while i > 1:
+    #Loop through the list
 
-            j = 0
+    for num in my_list:
 
-            while j < i:
+        #If the current number is greater than the maximum integer
 
-                if my_list[j] < my_list[j + 1]:
-                    temp = my_list[j]
-                    my_list[j] = my_list[j + 1]
-                    my_list[j + 1] = temp
-                j += 1
-            i -= 1
-        return my_list[0]
+        #Update the maximum integer
+
+        if num > max_int:
+
+            max_int = num
+
+    #Return the maximum integer
+
+    return max_int
