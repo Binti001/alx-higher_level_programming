@@ -4,12 +4,10 @@
 def safe_print_list(my_list=[], x=0):
     count = 0
     try:
-        for i in my_list[:x]:
-            print("{}".format(i), end="")
+        for i in range(x):
+            print(my_list[i], end="")
             count += 1
     except IndexError:
-        for i in my_list:
-            print("{}".format(i), end="")
-            count += 1
+        pass
     print("\n")
     return count
