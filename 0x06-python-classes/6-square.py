@@ -10,8 +10,13 @@ class Square:
          __size (int): Description of the parameter
          __position (tuple): The position of the square, default (0, 0)
         """
-            self.size = size
-            self.position = position
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = size
+            self.__position = position
 
     @property
     def size(self):
@@ -47,8 +52,5 @@ class Square:
             for i in range(self.__position[1]):
                 print()
             for i in range(self.__size):
-                for j in range(self.__position[0]):
-                    print(' ', end='')
-                for j in range(self.__size):
-                    print('#', end='')
-                print()
+                print(" " * self.__position[0], end="")
+                print("#" * self.__size)
