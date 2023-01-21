@@ -8,10 +8,6 @@ class MyList(list):
         """Create a copy of the list so that the original is not modified"""
         a = self.copy()
         """Sort the list in ascending order"""
-        for i in range(len(a) - 1):
-            if a[i] > a[i+1]:
-                temp = a[i]
-                a[i] = a[i+1]
-                a[i+1] = temp
+        a.sort()
         """Print the sorted list"""
         print(a)
