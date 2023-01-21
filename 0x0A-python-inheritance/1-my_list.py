@@ -8,8 +8,6 @@ class MyList(list):
         """Create a copy of the list so that the original is not modified"""
         a = self.copy()
         """Sort the list in ascending order"""
-        for i in a:
-            assert type(i) == int
         a.sort()
         """Print the sorted list"""
         print(a)
